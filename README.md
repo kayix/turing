@@ -1,4 +1,4 @@
-<p align="center">An e-commerce backend software based on nodejs.</p>
+<p>An e-commerce backend software based on nodejs.</p>
 
 ## Description
 
