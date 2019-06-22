@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  mysql-dev:
+    container_name: mysql-container
+    image: mysql:8.0.2
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./init.sql:/data/application/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: passwordpass1
+      MYSQL_DATABASE: db
+    ports:
+      - "3306:3306"
+
+  app:
+    container_name: docker-node-mysql
+    build: .
+    ports:
+      - "3000:3000"
+    links:
+      - mysql-dev
+    depends_on:
+      - mysql-dev
+    restart: always
+    command: npm run start:dev
+
+volumes:
+  container-volume:
