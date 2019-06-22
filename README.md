@@ -1,5 +1,3 @@
-<p>An e-commerce backend software based on nodejs.</p>
-
 ## Description
 
 <ul>
@@ -33,6 +31,12 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+```
+
+### Running with Docker
+```bash
+docker-compose up
+docker-compose down
 ```
 
 ## Testing

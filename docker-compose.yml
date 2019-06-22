@@ -23,7 +23,7 @@ services:
     depends_on:
       - mysql-dev
     restart: always
-    command: npm run start:dev
+    command: npm run start:prod
 
 volumes:
   container-volume:
