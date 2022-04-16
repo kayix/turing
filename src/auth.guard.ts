@@ -12,7 +12,7 @@ export class JwtAuthGuard extends AuthGuard('jwt') {
   handleRequest(err, user, info) {
     if (err || !user) {
       // throw err || new UnauthorizedException();
-      throw err || new HttpException({ code: 'AUT_02', message: 'The apikey is invalidddddd.', field: 'API-KEY' }, 401);
+      throw err || new HttpException({ code: 'AUT_02', message: 'The apikey is invalidddddd.', field: 'API-KEdddY' }, 401);
     }
     return user;
   }
